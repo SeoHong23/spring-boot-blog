@@ -10,6 +10,8 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.Map;
 
+import static java.util.Collections.emptyMap;
+
 
 @Getter
 public class JwtFactory {
