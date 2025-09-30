@@ -20,15 +20,15 @@ httpRequest("DELETE", "/api/articles/" + id, null, success, fail);
 }
 
 // 수정 기능
-const modifyButton = document.getElementById('modify-btn');
+const modifyButton = document.getElementById("modify-btn");
 
 if(modifyButton) {
 // 클릭 이벤트가 감지되면 수정 API 요청
-modifyButton.addEventListener('click', (event) => {
-let params = new URLSearchParams(location.search);
-let id = params.get("id");
+    modifyButton.addEventListener("click", (event) => {
+        let params = new URLSearchParams(location.search);
+        let id = params.get("id");
 
-body: JSON.stringify({
+    body = JSON.stringify({
     title: document.getElementById("title").value,
     content: document.getElementById("content").value,
     });
@@ -67,7 +67,7 @@ createButton.addEventListener("click", (event) => {
     location.replace("/articles");
     }
 
-    httpRequest("/POST", "/api/articles", body, success, fail);
+    httpRequest("POST", "/api/articles", body, success, fail);
     });
 }
 
@@ -75,7 +75,7 @@ createButton.addEventListener("click", (event) => {
 function getCookie(key) {
     var result = null;
     var cookie = document.cookie.split(";");
-    cookie.some(function (item)) {
+    cookie.some(function (item) {
     item = item.replace(" ", "");
 
     var dic = item.split("=");

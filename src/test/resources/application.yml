@@ -11,9 +11,7 @@ spring:
   h2: # H2 콘솔 활성화
     console:
       enabled: true
-jwt:
-  issuer: ajufresh@gmail.com
-  secret_key: study-springboot
+
   security:
     oauth2:
       client:
@@ -21,9 +19,11 @@ jwt:
           google:
 
             scope:
-              -email
-              -profile
+              - email
+              - profile
 
-
+jwt:
+  issuer: ajufresh@gmail.com
+  secret_key: c3R1ZHktc3ByaW5nYm9vdA==
 
 

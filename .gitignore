@@ -40,3 +40,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Spring Boot 설정 파일 무시
+src/main/resources/application.yml
+src/test/resources/application.yml
